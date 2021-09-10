@@ -44,7 +44,7 @@ for each in csv_values:
                 varFrom = msg['from']
                 varSubject = decode_header(varSubject)[0][0]
 
-                if f'${COUPON_AMOUNT} coupon' in str(varSubject):
+                if f'$coupon' in str(varSubject):
                     print(f'{c} Mail: {user}\n  Subject: {varSubject}\n')
                     with open('mails_with_coupons.csv', 'a') as f:
                         row = f'{user},{password},"${COUPON_AMOUNT}"\n'
